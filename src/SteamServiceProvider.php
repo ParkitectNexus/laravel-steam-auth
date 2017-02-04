@@ -28,7 +28,7 @@ class SteamServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app['steamauth'] = $this->app->share(
+        $this->app['steamauth'] = $this->app->singleton(
             function () {
                 return new SteamAuth();
             }
